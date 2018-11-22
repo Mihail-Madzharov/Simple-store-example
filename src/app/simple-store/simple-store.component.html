@@ -1,0 +1,5 @@
+<input type="text" #inputValue />
+<button (click)="dispatchInputValue(inputValue.value)">Send</button>
+<p *ngIf="(inputValue$ | async) as inputValue">
+  {{inputValue}}
+</p>
