@@ -7,15 +7,12 @@ import { SimpleStoreComponent } from './simple-store/simple-store.component';
 import { StoreModule, Store } from '@ngrx/store';
 import { DispatcherToken } from './shared/tokens/dispatch-token';
 import { RxjsOperatorsComponent } from './rxjs-operators/rxjs-operators.component';
-<<<<<<< Updated upstream
 import { SimpleStoreModule } from './simple-store/simple-store.module';
 import { RxjsOperatorsModule } from './rxjs-operators/rxjs-operators.module';
-=======
 import { FirstValueToken, SecondValueToken } from './rxjs-operators/tokens';
 import { getFirstValue, getSecondValue } from './rxjs-operators/store/rxjs-operators.selector';
 import { MvvmPatternModule } from './mvvm-pattern/mvvm-pattern.module';
-import { MvvmPatternComponent } from './mvvm-pattern/mvvm-pattern/mvvm-pattern.component';
->>>>>>> Stashed changes
+import { MvvmPatternComponent } from './mvvm-pattern/mvvm-pattern.component';
 
 
 const routes: Routes = [
@@ -27,11 +24,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-<<<<<<< Updated upstream
-=======
     SimpleStoreComponent,
     RxjsOperatorsComponent,
->>>>>>> Stashed changes
   ],
   imports: [
     MvvmPatternModule,

@@ -22,16 +22,6 @@ export class SimpleStoreComponent {
     @Inject(InputValueToken)
     public inputValue$: Observable<string>
   ) {
-    // If we make subscription in side of subscription
-    // it may lead to unhandled subscriptions of
-    // the inner observable
-
-    // this.inputValue$.pipe(take(3)).subscribe(newValue => {
-    //   console.log('Outer value => ' + newValue);
-    //   this.inputValue$.subscribe(innerSubscription => {
-    //     console.log('Inner value -> ' + innerSubscription);
-    //   })
-    // });
 
     // The selector will not emit value if the value is  the same
     // as the previous one
