@@ -1,8 +1,12 @@
-<div>
-  <label>First value</label>
-  <input type="text" #firstValue />
-  <button (click)="sendFirstValue(firstValue.value)">Send first value</button>
-  <label>Second value</label>
-  <input type="text" #secondValue />
-  <button (click)="sendSecondValue(secondValue.value)">Send second value</button>
+<div class="wrapper">
+  <div class="input-fields">
+    <label>First value</label>
+    <input type="text" #firstValue />
+    <button (click)="sendFirstValue(firstValue.value)">Send first value</button>
+  </div>
+  <div class="input-fields">
+    <label>Second value</label>
+    <input type="text" #secondValue />
+    <button (click)="sendSecondValue(secondValue.value)">Send second value</button>
+  </div>
 </div>

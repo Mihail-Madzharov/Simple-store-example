@@ -1,16 +1,16 @@
 import { Action } from '@ngrx/store';
 
 export const RxjsOperatorsActionTypes = {
-  GetFirstValue: '[RxJS Operators] Get value from first input',
-  GetSecondValue: '[RxJS Operators] Get value from second input'
+  UpdateFirstValueAction: '[RxJS Operators] Get value from first input',
+  UpdateSecondValueAction: '[RxJS Operators] Get value from second input'
 };
 
-export class GetFirstValueAction implements Action {
-  readonly type = RxjsOperatorsActionTypes.GetFirstValue;
+export class UpdateFirstValueAction implements Action {
+  readonly type = RxjsOperatorsActionTypes.UpdateFirstValueAction;
   constructor(public payload: string) { }
 }
 
-export class GetSecondValueAction implements Action {
-  readonly type = RxjsOperatorsActionTypes.GetSecondValue;
+export class UpdateSecondValueAction implements Action {
+  readonly type = RxjsOperatorsActionTypes.UpdateSecondValueAction;
   constructor(public payload: string) { }
 }

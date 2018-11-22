@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { DispatcherToken } from '../shared/tokens/dispatch-token';
+import { UpdateFirstValueAction, UpdateSecondValueAction } from './store/rxjs-operators.actions';
 
 @Component({
   selector: 'app-rxjs-operators',
@@ -7,11 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RxjsOperatorsComponent {
 
-  public sendFirstValue(firstValue): void {
+  constructor(
+    @Inject(DispatcherToken)
+    private dispatcher: Function
+  ) { }
 
+  public sendFirstValue(firstValue): void {
+    this.dispatcher(new UpdateFirstValueAction(firstValue));
   }
 
   public sendSecondValue(secondValue): void {
-
+    this.dispatcher(new UpdateSecondValueAction(secondValue));
   }
 }
