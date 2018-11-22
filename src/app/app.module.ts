@@ -24,8 +24,6 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    SimpleStoreComponent,
-    RxjsOperatorsComponent,
   ],
   imports: [
     MvvmPatternModule,

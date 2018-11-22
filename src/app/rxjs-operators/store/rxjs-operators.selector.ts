@@ -10,5 +10,5 @@ export const getFirstValue = createSelector(
 
 export const getSecondValue = createSelector(
   featureSelector,
-  state => state.firstValue
+  state => state.secondValue
 );
