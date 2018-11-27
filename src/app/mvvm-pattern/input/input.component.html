@@ -1,0 +1,7 @@
+<label for="input" *ngIf="viewModel.isValid">{{viewModel.label}}</label>
+<label *ngIf="!viewModel.isValid">{{viewModel.invalidMessage}}</label>
+<p>
+    <input #input type="text" [value]="viewModel.value" [disabled]="viewModel.disabled">
+</p>
+<button (click)="emitValue(input.value)" [disabled]="viewModel.disabled">{{viewModel.buttonLabel}}</button>
+<button (click)="resetComponentState()" [disabled]="!viewModel.disabled">{{viewModel.resetButtonLabel}}</button>
