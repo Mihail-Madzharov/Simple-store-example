@@ -8,14 +8,17 @@ import { StoreModule, Store } from '@ngrx/store';
 import { DispatcherToken } from './shared/tokens/dispatch-token';
 import { RxjsWithLatestFromComponent } from './rxjs-with-latest-from/rxjs-with-latest-from.component';
 import { SimpleStoreModule } from './simple-store/simple-store.module';
-import { RxjsOperatorsModule } from './rxjs-with-latest-from/rxjs-with-latest-from.module';
+import { RxjsWithLatestFromModule } from './rxjs-with-latest-from/rxjs-with-latest-from.module';
 import { MvvmPatternModule } from './mvvm-pattern/mvvm-pattern.module';
 import { MvvmPatternComponent } from './mvvm-pattern/mvvm-pattern.component';
+import { RxjsCombineLatestComponent } from './rxjs-combine-latest/rxjs-combine-latest/rxjs-combine-latest.component';
+import { RxjsCombineLatestModule } from './rxjs-combine-latest/rxjs-combine-latest.module';
 
 
 const routes: Routes = [
   { path: 'simple-store', component: SimpleStoreComponent },
   { path: 'rxjs-with-latest-from', component: RxjsWithLatestFromComponent },
+  {path: 'rxjs-combine-latest', component: RxjsCombineLatestComponent},
   { path: 'mvvm-pattern', component: MvvmPatternComponent },
 ];
 
@@ -29,7 +32,8 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     StoreModule.forRoot({}),
     SimpleStoreModule,
-    RxjsOperatorsModule
+    RxjsCombineLatestModule,
+    RxjsWithLatestFromModule
   ],
   providers: [
     {

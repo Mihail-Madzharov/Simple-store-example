@@ -26,4 +26,4 @@ import { getFirstValue, getSecondValue } from './store/rxjs-with-latest-from.sel
     }
   ]
 })
-export class RxjsOperatorsModule { }
+export class RxjsWithLatestFromModule { }

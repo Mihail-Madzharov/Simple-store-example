@@ -1,3 +1,25 @@
-<p>
-  rxjs-combine-latest works!
-</p>
+<div class="wrapper">
+  <div class="input-fields">
+    <label>First value</label>
+    <input type="text" #firstValue />
+    <button (click)="sendFirstValue(firstValue.value)">Send first value</button>
+  </div>
+  <div class="input-fields">
+    <label>Second value</label>
+    <input type="text" #secondValue />
+    <button (click)="sendSecondValue(secondValue.value)">Send second value</button>
+  </div>
+</div>
+<div>
+  <h3>Output</h3>
+
+  <p>
+    <span>First value from store: </span>
+    <span>{{firstOutput}}</span>
+  </p>
+
+  <p>
+    <span>Second value from store: </span>
+    <span>{{secondOutput}}</span>
+  </p>
+</div>
