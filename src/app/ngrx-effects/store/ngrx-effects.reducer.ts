@@ -12,7 +12,6 @@ const initialState: NgrxEffectsState = {
 
 
 function updateInputValue(state: NgrxEffectsState, action: UpdateNgrxInputValueAction) {
-    debugger
     const newState = Object.assign({}, state);
     newState.inputValue = action.payload;
     return newState;
