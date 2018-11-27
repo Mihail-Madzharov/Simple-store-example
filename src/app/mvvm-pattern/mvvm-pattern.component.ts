@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { InputViewModel } from './input/input.viewmodel';
+import { InputViewModel } from '../shared/components/input/input.viewmodel';
+
 
 @Component({
   selector: 'app-mvvm-pattern',
@@ -29,7 +30,7 @@ export class MvvmPatternComponent implements OnInit {
   mapViewModel(value: string) {
     this.viewModel.value = value;
     this.viewModel.isValid = value.length < 5;
-    this.viewModel.disabled = value.length > 5;
+    this.viewModel.disabled = value.length >= 5;
   }
 
 }

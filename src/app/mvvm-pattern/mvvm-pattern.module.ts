@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MvvmPatternComponent } from './mvvm-pattern.component';
-import { InputComponent } from './input/input.component';
+import { SharedModule } from '../shared/components/shared.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ],
-  declarations: [MvvmPatternComponent, InputComponent],
-  exports: [MvvmPatternComponent ]
+  declarations: [MvvmPatternComponent],
 })
 export class MvvmPatternModule { }
