@@ -1,17 +1,21 @@
-<nav>
-  <ul>
-    <li>
-      <a routerLink="/simple-store">Simple Store</a>
-    </li>
-    <li>
-      <a routerLink="/rxjs-with-latest-from">RxJS WithLatestFrom Operator</a>
-    </li>
-    <li>
-      <a routerLink="/rxjs-combine-latest">RxJS CombineLatest Operator</a>
-    </li>
-    <li>
-      <a routerLink="/mvvm-pattern">MVVM Pattern</a>
-    </li>
-  </ul>
-</nav>
-<router-outlet></router-outlet>
+<div id="container">
+  <nav>
+    <ul>
+      <li>
+        <a routerLinkActive="active" routerLink="/simple-store">Simple Store</a>
+      </li>
+      <li>
+        <a routerLinkActive="active" routerLink="/rxjs-with-latest-from">RxJS WithLatestFrom Operator</a>
+      </li>
+      <li>
+        <a routerLinkActive="active" routerLink="/rxjs-combine-latest">RxJS CombineLatest Operator</a>
+      </li>
+      <li>
+        <a routerLinkActive="active" routerLink="/mvvm-pattern">MVVM Pattern</a>
+      </li>
+    </ul>
+  </nav>
+  <div id="router">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -47,19 +47,15 @@ export class RxjsCombineLatestComponent implements OnDestroy {
     //   });
 
     this.firstSubject$
-    .pipe(
-      combineLatest(this.secondSubject$),
-      takeUntil(this.onDestroy$),
-    )
-    .subscribe(([frOutSub, scOutSub]) => {
-      this.firstOutput = frOutSub;
-      this.secondOutput = scOutSub;
-    });
+      .pipe(
+        combineLatest(this.secondSubject$),
+        takeUntil(this.onDestroy$),
+      )
+      .subscribe(([frOutSub, scOutSub]) => {
+        this.firstOutput = frOutSub;
+        this.secondOutput = scOutSub;
+      });
   }
-
-
-
-
 
   //  #region combineLatest #2 without Store.
   //   Here we can notify again different behavior when we use combineLatest but without store.
@@ -76,12 +72,12 @@ export class RxjsCombineLatestComponent implements OnDestroy {
 
   public sendFirstValue(firstValue): void {
     this.firstSubject$.next(firstValue);
-     // this.dispatcher(new UpdateFirstValueAction(firstValue));
+    // this.dispatcher(new UpdateFirstValueAction(firstValue));
   }
 
   public sendSecondValue(secondValue): void {
     this.secondSubject$.next(secondValue);
-     // this.dispatcher(new UpdateSecondValueAction(secondValue));
+    // this.dispatcher(new UpdateSecondValueAction(secondValue));
   }
 
   public ngOnDestroy(): void {

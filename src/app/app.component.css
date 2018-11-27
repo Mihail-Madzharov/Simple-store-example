@@ -1,21 +1,44 @@
 ul {
-  list-style-type: none
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  width: 20%;
+  height: 100vh;
+  border-right: 1px solid black;
+}
+
+#container {
+  display: flex
+}
+
+#router {
+  width: 80%;
+  padding-left: 20px;
 }
 
 li {
-  display: inline-block;
-  margin-right: 30px;
-  border-right: 1px solid black;
-  padding-right: 15px; 
+  margin: 0 30px 30px 0;
+  padding: 0 15px;
+}
+
+.router-outlet {
+  background-color: black;
 }
 
 a {
   text-decoration: none;
   font-weight: bold;
   color: black;
-  font-size: 1.5em;
+  font-size: 1.1em;
 }
 
 a:hover {
   color: blue;
+}
+
+.active {
+  color: rgb(94, 191, 221);
 }
