@@ -13,13 +13,16 @@ import { MvvmPatternModule } from './mvvm-pattern/mvvm-pattern.module';
 import { MvvmPatternComponent } from './mvvm-pattern/mvvm-pattern.component';
 import { RxjsCombineLatestComponent } from './rxjs-combine-latest/rxjs-combine-latest/rxjs-combine-latest.component';
 import { RxjsCombineLatestModule } from './rxjs-combine-latest/rxjs-combine-latest.module';
+import { BehaviorExampleModule } from './behavior-example/behavior-example.module';
+import { BehaviorExampleComponent } from './behavior-example/behavior-example/behavior-example.component';
 
 
 const routes: Routes = [
   { path: 'simple-store', component: SimpleStoreComponent },
   { path: 'rxjs-with-latest-from', component: RxjsWithLatestFromComponent },
-  {path: 'rxjs-combine-latest', component: RxjsCombineLatestComponent},
+  { path: 'rxjs-combine-latest', component: RxjsCombineLatestComponent },
   { path: 'mvvm-pattern', component: MvvmPatternComponent },
+  { path: 'behavior-example', component: BehaviorExampleComponent }
 ];
 
 @NgModule({
@@ -33,7 +36,8 @@ const routes: Routes = [
     StoreModule.forRoot({}),
     SimpleStoreModule,
     RxjsCombineLatestModule,
-    RxjsWithLatestFromModule
+    RxjsWithLatestFromModule,
+    BehaviorExampleModule
   ],
   providers: [
     {
