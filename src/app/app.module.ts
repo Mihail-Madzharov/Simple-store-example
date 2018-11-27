@@ -15,6 +15,8 @@ import { RxjsCombineLatestComponent } from './rxjs-combine-latest/rxjs-combine-l
 import { RxjsCombineLatestModule } from './rxjs-combine-latest/rxjs-combine-latest.module';
 import { NgrxEffectsComponent } from './ngrx-effects/ngrx-effects.component';
 import { NgrxEffectsModule } from './ngrx-effects/ngrx-effects.module';
+import { BehaviorExampleModule } from './behavior-example/behavior-example.module';
+import { BehaviorExampleComponent } from './behavior-example/behavior-example/behavior-example.component';
 
 
 const routes: Routes = [
@@ -23,6 +25,7 @@ const routes: Routes = [
   { path: 'rxjs-combine-latest', component: RxjsCombineLatestComponent },
   { path: 'mvvm-pattern', component: MvvmPatternComponent },
   { path: 'ngrx-effects', component: NgrxEffectsComponent },
+  { path: 'behavior-example', component: BehaviorExampleComponent }
 ];
 
 @NgModule({
@@ -37,7 +40,8 @@ const routes: Routes = [
     SimpleStoreModule,
     RxjsCombineLatestModule,
     RxjsWithLatestFromModule,
-    NgrxEffectsModule
+    NgrxEffectsModule,
+    BehaviorExampleModule
   ],
   providers: [
     {
