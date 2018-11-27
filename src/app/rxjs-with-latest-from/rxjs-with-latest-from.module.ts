@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { rxjsOperatorsReducer } from './store/rxjs-operators.reducer';
-import { RxJSOperatorsState } from './store/rxjs-operators.state';
+import { rxjsOperatorsReducer } from './store/rxjs-with-latest-from.reducer';
+import { WithLatestFromState } from './store/rxjs-with-latest-from.state';
 import { StoreModule, select, Store } from '@ngrx/store';
-import { RxjsOperatorsComponent } from './rxjs-operators.component';
+import { RxjsWithLatestFromComponent } from './rxjs-with-latest-from.component';
 import { FirstValueToken, SecondValueToken } from './tokens';
-import { getFirstValue, getSecondValue } from './store/rxjs-operators.selector';
+import { getFirstValue, getSecondValue } from './store/rxjs-with-latest-from.selector';
 
 @NgModule({
   imports: [
     CommonModule,
-    StoreModule.forFeature(RxJSOperatorsState.stateName, rxjsOperatorsReducer)
+    StoreModule.forFeature(WithLatestFromState.stateName, rxjsOperatorsReducer)
   ],
-  declarations: [RxjsOperatorsComponent],
+  declarations: [RxjsWithLatestFromComponent],
   providers: [
     {
       provide: FirstValueToken,

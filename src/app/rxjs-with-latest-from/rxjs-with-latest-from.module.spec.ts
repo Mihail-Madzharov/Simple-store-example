@@ -1,4 +1,4 @@
-import { RxjsOperatorsModule } from './rxjs-operators.module';
+import { RxjsOperatorsModule } from './rxjs-with-latest-from.module';
 
 describe('RxjsOperatorsModule', () => {
   let rxjsOperatorsModule: RxjsOperatorsModule;

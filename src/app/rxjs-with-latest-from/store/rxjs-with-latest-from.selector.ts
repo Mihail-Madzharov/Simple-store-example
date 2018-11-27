@@ -1,7 +1,7 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import { RxJSOperatorsState } from './rxjs-operators.state';
+import { WithLatestFromState } from './rxjs-with-latest-from.state';
 
-export const featureSelector = createFeatureSelector<RxJSOperatorsState>(RxJSOperatorsState.stateName);
+export const featureSelector = createFeatureSelector<WithLatestFromState>(WithLatestFromState.stateName);
 
 export const getFirstValue = createSelector(
   featureSelector,

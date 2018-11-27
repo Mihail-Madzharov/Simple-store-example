@@ -6,18 +6,16 @@ import { AppComponent } from './app.component';
 import { SimpleStoreComponent } from './simple-store/simple-store.component';
 import { StoreModule, Store } from '@ngrx/store';
 import { DispatcherToken } from './shared/tokens/dispatch-token';
-import { RxjsOperatorsComponent } from './rxjs-operators/rxjs-operators.component';
+import { RxjsWithLatestFromComponent } from './rxjs-with-latest-from/rxjs-with-latest-from.component';
 import { SimpleStoreModule } from './simple-store/simple-store.module';
-import { RxjsOperatorsModule } from './rxjs-operators/rxjs-operators.module';
-import { FirstValueToken, SecondValueToken } from './rxjs-operators/tokens';
-import { getFirstValue, getSecondValue } from './rxjs-operators/store/rxjs-operators.selector';
+import { RxjsOperatorsModule } from './rxjs-with-latest-from/rxjs-with-latest-from.module';
 import { MvvmPatternModule } from './mvvm-pattern/mvvm-pattern.module';
 import { MvvmPatternComponent } from './mvvm-pattern/mvvm-pattern.component';
 
 
 const routes: Routes = [
   { path: 'simple-store', component: SimpleStoreComponent },
-  { path: 'rxjs-operators', component: RxjsOperatorsComponent },
+  { path: 'rxjs-with-latest-from', component: RxjsWithLatestFromComponent },
   { path: 'mvvm-pattern', component: MvvmPatternComponent },
 ];
 
