@@ -1,3 +1,2 @@
-<p>
-  ngrx-effects works!
-</p>
+<p>{{inputValue$ | async}}</p>
+<input type="text" #input (input)="updateInputValue(input.value)">

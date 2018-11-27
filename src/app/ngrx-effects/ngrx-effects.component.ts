@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { NgrxInputValueToken } from './token';
+import { Observable } from 'rxjs';
+import { DispatcherToken } from '../shared/tokens/dispatch-token';
+import { UpdateNgrxInputValueAction } from './store/ngrx-effects.actions';
 
 @Component({
   selector: 'app-ngrx-effects',
   templateUrl: './ngrx-effects.component.html',
   styleUrls: ['./ngrx-effects.component.css']
 })
-export class NgrxEffectsComponent implements OnInit {
+export class NgrxEffectsComponent {
 
-  constructor() { }
+  constructor(
+    @Inject(NgrxInputValueToken) public inputValue$: Observable<string>,
+    @Inject(DispatcherToken) private dispatcher: Function
+  ) { }
 
-  ngOnInit() {
+  updateInputValue(value: any) {
+    this.dispatcher(new UpdateNgrxInputValueAction(value));
   }
-
 }
