@@ -11,20 +11,23 @@ import { SimpleStoreModule } from './simple-store/simple-store.module';
 import { RxjsWithLatestFromModule } from './rxjs-with-latest-from/rxjs-with-latest-from.module';
 import { MvvmPatternModule } from './mvvm-pattern/mvvm-pattern.module';
 import { MvvmPatternComponent } from './mvvm-pattern/mvvm-pattern.component';
-import { RxjsCombineLatestComponent } from './rxjs-combine-latest/rxjs-combine-latest/rxjs-combine-latest.component';
+import { RxjsCombineLatestComponent } from './rxjs-combine-latest/rxjs-combine-latest.component';
 import { RxjsCombineLatestModule } from './rxjs-combine-latest/rxjs-combine-latest.module';
+import { NgrxEffectsComponent } from './ngrx-effects/ngrx-effects.component';
+import { NgrxEffectsModule } from './ngrx-effects/ngrx-effects.module';
 
 
 const routes: Routes = [
   { path: 'simple-store', component: SimpleStoreComponent },
   { path: 'rxjs-with-latest-from', component: RxjsWithLatestFromComponent },
-  {path: 'rxjs-combine-latest', component: RxjsCombineLatestComponent},
+  { path: 'rxjs-combine-latest', component: RxjsCombineLatestComponent },
   { path: 'mvvm-pattern', component: MvvmPatternComponent },
+  { path: 'ngrx-effects', component: NgrxEffectsComponent },
 ];
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     MvvmPatternModule,
@@ -33,7 +36,8 @@ const routes: Routes = [
     StoreModule.forRoot({}),
     SimpleStoreModule,
     RxjsCombineLatestModule,
-    RxjsWithLatestFromModule
+    RxjsWithLatestFromModule,
+    NgrxEffectsModule
   ],
   providers: [
     {
