@@ -1,5 +1,5 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { NgrxInputValueToken } from './token';
+import { Component, Inject } from '@angular/core';
+import { NgrxInputValueToken, LabelBackgroundColorToken } from './token';
 import { Observable } from 'rxjs';
 import { DispatcherToken } from '../shared/tokens/dispatch-token';
 import { UpdateNgrxInputValueAction } from './store/ngrx-effects.actions';
@@ -13,6 +13,7 @@ export class NgrxEffectsComponent {
 
   constructor(
     @Inject(NgrxInputValueToken) public inputValue$: Observable<string>,
+    @Inject(LabelBackgroundColorToken) public labelBackgroundColor$: Observable<string>,
     @Inject(DispatcherToken) private dispatcher: Function
   ) { }
 

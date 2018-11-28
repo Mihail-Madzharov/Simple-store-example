@@ -17,6 +17,7 @@ import { NgrxEffectsComponent } from './ngrx-effects/ngrx-effects.component';
 import { NgrxEffectsModule } from './ngrx-effects/ngrx-effects.module';
 import { BehaviorExampleModule } from './behavior-example/behavior-example.module';
 import { BehaviorExampleComponent } from './behavior-example/behavior-example/behavior-example.component';
+import { EffectsModule } from '@ngrx/effects';
 
 
 const routes: Routes = [
@@ -41,7 +42,8 @@ const routes: Routes = [
     RxjsCombineLatestModule,
     RxjsWithLatestFromModule,
     NgrxEffectsModule,
-    BehaviorExampleModule
+    BehaviorExampleModule,
+    EffectsModule.forRoot([]),
   ],
   providers: [
     {
