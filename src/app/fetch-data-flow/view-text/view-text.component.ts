@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { FetchDataFlowViewModel } from './fetch-data-flow.viewmodel';
 
 @Component({
   selector: 'app-view-text',
@@ -8,5 +9,5 @@ import { Component, Input } from '@angular/core';
 export class ViewTextComponent {
 
   @Input()
-  response: any;
+  viewModel: FetchDataFlowViewModel;
 }

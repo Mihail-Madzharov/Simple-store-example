@@ -4,6 +4,7 @@ import { UpdateInputValueAction } from './store/fetch-data-flow.actions';
 import { ResponseToken } from './tokens';
 import { Observable } from 'rxjs';
 import { SearchWikiModel } from './search-wiki.model';
+import { FetchDataFlowBehavior } from './fetch-data-flow.behavior';
 
 @Component({
   selector: 'app-fetch-data-flow',
@@ -16,7 +17,8 @@ export class FetchDataFlowComponent {
     @Inject(DispatcherToken)
     private dispatcher: Function,
     @Inject(ResponseToken)
-    public response$: Observable<SearchWikiModel>
+    public response$: Observable<SearchWikiModel>,
+    public fetchDataBehavior: FetchDataFlowBehavior
   ) { }
 
   public saveInStore(htmlElement): void {

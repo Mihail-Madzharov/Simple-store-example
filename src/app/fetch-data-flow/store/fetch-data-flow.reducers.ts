@@ -5,7 +5,10 @@ import { ActionsMap } from 'src/app/shared/models/reducer.model';
 import { FetchDataFlowState } from './fetch-data-flow.state';
 
 const initialState: FetchDataFlowState = {
-  response: null
+  response: {
+    title: '',
+    info: []
+  }
 };
 
 function saveResponse(state: FetchDataFlowState, action: SaveResponseAction): FetchDataFlowState {

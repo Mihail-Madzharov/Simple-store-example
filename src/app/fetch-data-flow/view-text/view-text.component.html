@@ -1,0 +1,7 @@
+<h2>Searched for {{viewModel.title}}</h2>
+  <h3 [style.color]="'rgb('+viewModel.titleColor+')'">Related articles</h3>
+  <ul>
+    <li [style.color]="'rgb('+viewModel.titleColor+')'" *ngFor="let item of viewModel.info">
+      {{item}}
+    </li>
+  </ul>

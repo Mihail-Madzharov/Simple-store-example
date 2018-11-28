@@ -1,3 +1,3 @@
 <input type="text" (input)="saveInStore($event)" />
 
-<app-view-text [response]="response$ | async"></app-view-text>
+<app-view-text [viewModel]="fetchDataBehavior.fetchDataBehavior$ | async"></app-view-text>

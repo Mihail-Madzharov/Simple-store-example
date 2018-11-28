@@ -2,7 +2,7 @@ import { Injectable, Inject } from '@angular/core';
 import { ResponseToken } from './tokens';
 import { SearchWikiModel } from './search-wiki.model';
 import { Observable } from 'rxjs';
-import { FetchDataFlowViewModel } from './store/fetch-data-flow.viewmodel';
+import { FetchDataFlowViewModel } from './view-text/fetch-data-flow.viewmodel';
 import { map } from 'rxjs/operators';
 
 @Injectable({
@@ -19,11 +19,15 @@ export class FetchDataFlowBehavior {
     this.fetchDataBehavior$ = this.response$
       .pipe(
         map((res: SearchWikiModel) => {
-
+          const red = Math.floor(Math.random() * 255);
+          const green = Math.floor(Math.random() * 255);
+          const blue = Math.floor(Math.random() * 255);
+          const color = `${red},${green},${blue}`;
+          console.log(res);
           return {
-            information: res,
-            isValid: res.title != null,
-            titleColor: ''
+            title: res.title,
+            info: res.info,
+            titleColor: color
           } as FetchDataFlowViewModel;
         })
       );

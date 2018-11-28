@@ -16,7 +16,7 @@ export class FetchDataFlowEffects {
       ofType<UpdateInputValueAction>(FetchDataFlowActionTypes.UpdateInputValue),
       switchMap(action => this.apiService$.fetchApi(action.payload)
         .pipe(
-          delay(5000),
+         // delay(5000),
           map((response) => {
             const [title, info] = response;
             return new SaveResponseAction({ title, info });

@@ -10,7 +10,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { FetchDataFlowEffects } from './store/fetch-data-flow.effects';
 import { ResponseToken } from './tokens';
 import { responseSelector } from './store/fetch-data-flow.selectors';
-import { ViewTextComponent } from './view-text.component';
+import { ViewTextComponent } from './view-text/view-text.component';
 
 
 @NgModule({
