@@ -29,6 +29,5 @@ const actionsMap: ActionsMap<NgrxEffectsState> = {
 };
 
 export function ngrxEffectsReducers(state = initialState, action: Action) {
-    console.log(action.type);
     return actionsMap[action.type] != null ? actionsMap[action.type](state, action) : state;
 }

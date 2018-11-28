@@ -17,6 +17,8 @@ import { NgrxEffectsComponent } from './ngrx-effects/ngrx-effects.component';
 import { NgrxEffectsModule } from './ngrx-effects/ngrx-effects.module';
 import { BehaviorExampleModule } from './behavior-example/behavior-example.module';
 import { BehaviorExampleComponent } from './behavior-example/behavior-example/behavior-example.component';
+import { FetchDataFlowComponent } from './fetch-data-flow/fetch-data-flow.component';
+import { FetchDataFlowModule } from './fetch-data-flow/fetch-data-flow.module';
 import { EffectsModule } from '@ngrx/effects';
 
 
@@ -26,7 +28,8 @@ const routes: Routes = [
   { path: 'rxjs-combine-latest', component: RxjsCombineLatestComponent },
   { path: 'mvvm-pattern', component: MvvmPatternComponent },
   { path: 'ngrx-effects', component: NgrxEffectsComponent },
-  { path: 'behavior-example', component: BehaviorExampleComponent }
+  { path: 'behavior-example', component: BehaviorExampleComponent },
+  { path: 'fetch-data-flow', component: FetchDataFlowComponent }
 ];
 
 @NgModule({
@@ -43,6 +46,7 @@ const routes: Routes = [
     RxjsWithLatestFromModule,
     NgrxEffectsModule,
     BehaviorExampleModule,
+    FetchDataFlowModule,
     EffectsModule.forRoot([]),
   ],
   providers: [

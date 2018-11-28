@@ -1,0 +1,9 @@
+<div *ngIf="response">
+  <h2>Searched for {{response.title}}</h2>
+  <h3>Related articles</h3>
+  <ul>
+    <li *ngFor="let item of response.info">
+      {{item}}
+    </li>
+  </ul>
+</div>
