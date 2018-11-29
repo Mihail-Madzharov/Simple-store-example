@@ -33,16 +33,16 @@ export class RxjsWithLatestFromComponent implements OnDestroy {
     //   the inner observable
     // #endregion
 
-    this.firstValueFromStore$.pipe(
-      take(4))
-      .subscribe(firstOut => {
-        this.firstOutput = firstOut;
-        this.secondValueFromStore$
-          .subscribe(secondOut => {
-            this.counter++;
-            this.secondOutput = this.counter.toString();
-          });
-      });
+    // this.firstValueFromStore$.pipe(
+    //   take(4))
+    //   .subscribe(firstOut => {
+    //     this.firstOutput = firstOut;
+    //     this.secondValueFromStore$
+    //       .subscribe(secondOut => {
+    //         this.counter++;
+    //         this.secondOutput = this.counter.toString();
+    //       });
+    //   });
 
 
     // withLatestFrom Operator.
@@ -54,15 +54,15 @@ export class RxjsWithLatestFromComponent implements OnDestroy {
     //   secondValue$ as inner observable.
     // #endregion
 
-    // this.firstValueFromStore$
-    //   .pipe(
-    //     withLatestFrom(this.secondValueFromStore$),
-    //     takeUntil(this.onDestroy$)
-    //   )
-    //   .subscribe(([firstOut, secondOut]) => {
-    //     this.firstOutput = firstOut;
-    //     this.secondOutput = secondOut;
-    //   });
+    this.firstValueFromStore$
+      .pipe(
+        withLatestFrom(this.secondValueFromStore$),
+        takeUntil(this.onDestroy$)
+      )
+      .subscribe(([firstOut, secondOut]) => {
+        this.firstOutput = firstOut;
+        this.secondOutput = secondOut;
+      });
 
     //  #region withLatestFrom #2 without Store
     //   In this example we can notify different behavior from previous example(#1).

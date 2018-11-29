@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { SaveResponseAction, FetchDataFlowActionTypes, UpdateInputValueAction, HandleErrorAction } from './fetch-data-flow.actions';
-import { switchMap, map, catchError, delay } from 'rxjs/operators';
+import { switchMap, map, catchError, delay, mergeMap } from 'rxjs/operators';
 import { FetchDataFlowService } from '../fetch-data-flow.service';
 import { of } from 'rxjs';
 
@@ -11,18 +11,17 @@ import { of } from 'rxjs';
 export class FetchDataFlowEffects {
 
   @Effect()
-  getResponse = this.actions$
+  getResponse$ = this.actions$
     .pipe(
       ofType<UpdateInputValueAction>(FetchDataFlowActionTypes.UpdateInputValue),
       switchMap(action => this.apiService$.fetchApi(action.payload)
         .pipe(
-         // delay(5000),
+          // delay(5000),
           map((response) => {
             const [title, info] = response;
             return new SaveResponseAction({ title, info });
           }),
           catchError(err => {
-            console.log(err);
             return of(new HandleErrorAction(err));
           })
         )
